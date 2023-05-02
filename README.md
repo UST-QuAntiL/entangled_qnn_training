@@ -13,7 +13,18 @@ Visualisation/Analysis of data (``plots.py``):
 	
 The data is available for download at **TODO**
 
+## Dependencies
 
+The code contained in this repository requires the following dependencies for reproducing the experiments:
+- matplotlib (3.5.2)
+- networkx (2.8.8)
+- numpy (1.24.1)
+- PennyLane (0.27.0)
+- qiskit (0.39.2)
+- scipy (1.10.1)
+- torch (2.0.0)
+
+Use ``requirements.txt`` to automatically install them: ``pip install -r requirements.txt``
 
 #### Disclaimer of Warranty
 
