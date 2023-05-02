@@ -20,7 +20,6 @@ The code contained in this repository requires the following dependencies for re
 - networkx (2.8.8)
 - numpy (1.24.1)
 - PennyLane (0.27.0)
-- qiskit (0.39.2)
 - scipy (1.10.1)
 - torch (2.0.0)
 
