@@ -54,23 +54,6 @@ def torch_tensor_product(matrix1: torch.Tensor, matrix2: torch.Tensor, device='c
             result[i*matrix2.shape[0]:i*matrix2.shape[0]+matrix2.shape[0], j*matrix2.shape[1]:j*matrix2.shape[1]+matrix2.shape[1]] = matrix1[i, j] * matrix2
     return result
 
-def adjoint_unitary_circuit(unitary):
-    """
-    Generates a circuit corresponding to the adjoint of the input matrix
-    """
-    from qiskit import QuantumCircuit, Aer, transpile
-
-    unitary = np.conj(np.array(unitary)).T
-
-    qbits = int(np.log2(len(unitary)))
-    sv_backend = Aer.get_backend('statevector_simulator')
-
-    qc = QuantumCircuit(qbits)
-    qc.unitary(unitary, range(qbits))
-    qc_transpiled = transpile(qc, backend=sv_backend, basis_gates=sv_backend.configuration().basis_gates,
-                              optimization_level=3)
-    return qml.from_qiskit(qc_transpiled)
-
 # Data integrity checks
 
 def all_ortho(*vecs):
