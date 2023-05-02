@@ -2,7 +2,6 @@ from qnns.qnn import *
 from data import *
 from qnns.quantum_qnn import *
 import classic_training
-import quantum_training
 import time
 
 

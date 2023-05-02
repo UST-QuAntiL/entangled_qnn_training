@@ -117,6 +117,11 @@ def nlihx_plots():
     d = 64
     expectedfn = 1 - ((d/x)**2 + d + 1)/(d*(d+1))
 
+    # colors
+    cmap = matplotlib.cm.get_cmap('tab10')
+    redc = cmap(3)
+    bluec = cmap(0)
+
     colfigsize = set_size(446) 
     fig, ax = plt.subplots(1,1,figsize=colfigsize)
     avg_risks = np.load("nlihx_exp_points.npy")
@@ -125,8 +130,8 @@ def nlihx_plots():
     # Risk after training for trianing pairs with r such that r*t = d -> they should all have 0 risk
     ax.set_ylabel("Average risk")
     ax.set_xlabel("Number of training pairs")
-    plt.axhline(y = 0, color = 'r', linestyle = '--', label=r'Lower bound for the expected risk')
-    plt.plot(x, expectedfn, label=r'Lower bound for linearly dependent data', color="lightblue")
+    plt.axhline(y = 0, color = redc, linestyle = '--', label=r'Lower bound for the expected risk')
+    plt.plot(x, expectedfn, label=r'Lower bound for linearly dependent data', color=bluec)
     xvals = [1,2,4,8,16,32,64] 
     xticks = [1,16,32,48,64]
     plt.xticks(xticks)
@@ -146,6 +151,11 @@ def ortho_plots():
     r = d/x
     expectedfn = 1 - (x * r**2 + d + 1)/(d*(d+1))
 
+    # colors
+    cmap = matplotlib.cm.get_cmap('tab10')
+    redc = cmap(3)
+    bluec = cmap(0)
+
     colfigsize = set_size(446) 
     fig, ax = plt.subplots(1,1,figsize=colfigsize)
     avg_risks = np.load("orthogonal_exp_points.npy")
@@ -154,8 +164,8 @@ def ortho_plots():
     # Risk after training for trianing pairs with r such that r*t = d -> they should all have 0 risk
     ax.set_ylabel("Average risk")
     ax.set_xlabel("Number of training pairs")
-    plt.axhline(y = 0, color = 'r', linestyle = '--', label=r'Lower bound for the expected risk')
-    plt.plot(x, expectedfn, label=r'Lower bound for orthogonal data', color="lightblue")
+    plt.axhline(y = 0, color = redc, linestyle = '--', label=r'Lower bound for the expected risk')
+    plt.plot(x, expectedfn, label=r'Lower bound for orthogonal data', color=bluec)
     xvals = [1,2,4,8,16,32,64] 
     xticks = [1,16,32,48,64]
     plt.xticks(xticks)
