@@ -129,7 +129,7 @@ def nlihx_plots():
     
     # Risk after training for trianing pairs with r such that r*t = d -> they should all have 0 risk
     ax.set_ylabel("Average risk")
-    ax.set_xlabel("Number of training pairs")
+    ax.set_xlabel("Number of training samples $t$")
     plt.axhline(y = 0, color = redc, linestyle = '--', label=r'Lower bound for the expected risk')
     plt.plot(x, expectedfn, label=r'Lower bound for linearly dependent data', color=bluec)
     xvals = [1,2,4,8,16,32,64] 
@@ -163,7 +163,7 @@ def ortho_plots():
     
     # Risk after training for trianing pairs with r such that r*t = d -> they should all have 0 risk
     ax.set_ylabel("Average risk")
-    ax.set_xlabel("Number of training pairs")
+    ax.set_xlabel("Number of training samples $t$")
     plt.axhline(y = 0, color = redc, linestyle = '--', label=r'Lower bound for the expected risk')
     plt.plot(x, expectedfn, label=r'Lower bound for orthogonal data', color=bluec)
     xvals = [1,2,4,8,16,32,64] 
@@ -326,7 +326,7 @@ def avg_rank_plot():
 
 
     plt.ylabel("Average risk")
-    plt.xlabel("Number of training pairs")
+    plt.xlabel("Number of training samples $t$")
     plt.legend(bbox_to_anchor=(0, 1), loc='lower left', ncol=2)
     plt.xlim([0,65])
     plt.ylim([-0.05,1.05])
@@ -362,7 +362,7 @@ def avg_rank_loss_plot():
 
     ax.ticklabel_format(axis='y', style='sci', scilimits = (0,0))
     plt.ylabel("Average loss")
-    plt.xlabel("Number of training pairs")
+    plt.xlabel("Number of training samples $t$")
     plt.legend(bbox_to_anchor=(0.15, 1), loc='lower left', ncol=2)
     plt.xlim([0,65])
     plt.xticks([1,16,32,48,64])
