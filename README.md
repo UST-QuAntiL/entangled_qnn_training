@@ -1,5 +1,5 @@
-# Composition of Entangled Training Data in Quantum Neural Network Training
-Experiment/Code for reproduction of results for Composition of Entangled Training Data in Quantum Neural Network Training.
+# Collective Structure of Entangled Training Data in Quantum Neural Network Training
+Experiment/Code for reproduction of results for "Collective Structure of Entangled Training Data in Quantum Neural Network Training".
 
 Experiments:
 - avg_rank_exp.py: Experiments for training QNNs using training data of varying Schmidt rank
