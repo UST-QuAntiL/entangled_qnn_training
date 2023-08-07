@@ -1,4 +1,4 @@
-# Collective Structure of Entangled Training Data in Quantum Neural Network Training
+# On Reducing the Amount of Samples Required for Training of QNNs: Constraints on the Linear Structure of the Training Data
 Experiment/Code for reproduction of results for "Collective Structure of Entangled Training Data in Quantum Neural Network Training".
 
 Experiments:
