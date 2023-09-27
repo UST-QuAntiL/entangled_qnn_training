@@ -1,5 +1,7 @@
 # On Reducing the Amount of Samples Required for Training of QNNs: Constraints on the Linear Structure of the Training Data
-Experiment/Code for reproduction of results for "Collective Structure of Entangled Training Data in Quantum Neural Network Training".
+Experiment/Code for reproduction of results for 
+
+Alexander Mandl, Johanna Barzen, Frank Leymann, Daniel Vietz. On Reducing the Amount of Samples Required for Training of QNNs: Constraints on the Linear Structure of the Training Data. [arXiv:2309.13711 [quant-ph]](https://arxiv.org/abs/2309.13711)
 
 Experiments:
 - avg_rank_exp.py: Experiments for training QNNs using training data of varying Schmidt rank
